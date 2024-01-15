@@ -19,7 +19,7 @@ public class simpleRestController {
 
     //@CrossOrigin(origins = "http://localhost:4200")
     @CrossOrigin(origins = "https://disease-predictor-frontend.vercel.app")
-    @GetMapping("/em")
+    //@GetMapping("/em")
     @RequestMapping(value = "/em", method = {RequestMethod.GET, RequestMethod.OPTIONS})
     public symptoms getMethodName() {
         symptoms s=new symptoms();
@@ -29,7 +29,7 @@ public class simpleRestController {
 
     //@CrossOrigin(origins = "http://localhost:4200")
     @CrossOrigin(origins = "https://disease-predictor-frontend.vercel.app")
-    @PostMapping("/em")
+    //@PostMapping("/em")
     @RequestMapping(value = "/em", method = {RequestMethod.POST, RequestMethod.OPTIONS})
     public symptoms postMethodName(@RequestBody symptoms inputData) throws IOException, InterruptedException{
 
