@@ -19,8 +19,8 @@ public class simpleRestController {
 
     //@CrossOrigin(origins = "http://localhost:4200")
     @CrossOrigin(origins = "*")
-    @GetMapping("/em")
-    //@RequestMapping(value = "/em", method = {RequestMethod.GET, RequestMethod.OPTIONS})
+    //@GetMapping("/em")
+    @RequestMapping(value = "/em", method = {RequestMethod.GET, RequestMethod.OPTIONS})
     public symptoms getMethodName() {
         symptoms s=new symptoms();
         s.setSymList("Hello Guys!");
@@ -29,8 +29,8 @@ public class simpleRestController {
 
     //@CrossOrigin(origins = "http://localhost:4200")
     @CrossOrigin(origins = "*")
-    @PostMapping("/em")
-    //@RequestMapping(value = "/em", method = {RequestMethod.POST, RequestMethod.OPTIONS})
+    //@PostMapping("/em")
+    @RequestMapping(value = "/em", method = {RequestMethod.POST, RequestMethod.OPTIONS})
     public symptoms postMethodName(@RequestBody symptoms inputData) throws IOException, InterruptedException{
 
        
