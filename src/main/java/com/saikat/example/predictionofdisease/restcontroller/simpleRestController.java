@@ -17,20 +17,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RestController
 public class simpleRestController {
 
-    //@CrossOrigin(origins = "http://localhost:4200")
     @CrossOrigin(origins = "*")
-    //@GetMapping("/em")
-    @RequestMapping(value = "/em", method = {RequestMethod.GET, RequestMethod.OPTIONS})
+    @GetMapping("/em")
     public symptoms getMethodName() {
         symptoms s=new symptoms();
         s.setSymList("Hello Guys!");
         return s;
     }
 
-    //@CrossOrigin(origins = "http://localhost:4200")
     @CrossOrigin(origins = "*")
-    //@PostMapping("/em")
-    @RequestMapping(value = "/em", method = {RequestMethod.POST, RequestMethod.OPTIONS})
+    @PostMapping("/em")
     public symptoms postMethodName(@RequestBody symptoms inputData) throws IOException, InterruptedException{
 
        
