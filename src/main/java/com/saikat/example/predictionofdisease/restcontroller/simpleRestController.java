@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class simpleRestController {
 
     //@CrossOrigin(origins = "http://localhost:4200")
-    @CrossOrigin(origins = "https://disease-predictor-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://disease-predictor-frontend.vercel.app")
     @GetMapping("/em")
     public symptoms getMethodName() {
         symptoms s=new symptoms();
@@ -25,7 +25,7 @@ public class simpleRestController {
     }
 
     //@CrossOrigin(origins = "http://localhost:4200")
-    @CrossOrigin(origins = "https://disease-predictor-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://disease-predictor-frontend.vercel.app")
     @PostMapping("/em")
     public symptoms postMethodName(@RequestBody symptoms inputData) throws IOException, InterruptedException{
 
