@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class simpleRestController {
 
     //@CrossOrigin(origins = "http://localhost:4200")
-    @CrossOrigin(origins = "https://disease-predictor-frontend.vercel.app")
-    //@GetMapping("/em")
-    @RequestMapping(value = "/em", method = {RequestMethod.GET, RequestMethod.OPTIONS})
+    @CrossOrigin(origins = "*")
+    @GetMapping("/em")
+    //@RequestMapping(value = "/em", method = {RequestMethod.GET, RequestMethod.OPTIONS})
     public symptoms getMethodName() {
         symptoms s=new symptoms();
         s.setSymList("Hello Guys!");
@@ -28,9 +28,9 @@ public class simpleRestController {
     }
 
     //@CrossOrigin(origins = "http://localhost:4200")
-    @CrossOrigin(origins = "https://disease-predictor-frontend.vercel.app")
-    //@PostMapping("/em")
-    @RequestMapping(value = "/em", method = {RequestMethod.POST, RequestMethod.OPTIONS})
+    @CrossOrigin(origins = "*")
+    @PostMapping("/em")
+    //@RequestMapping(value = "/em", method = {RequestMethod.POST, RequestMethod.OPTIONS})
     public symptoms postMethodName(@RequestBody symptoms inputData) throws IOException, InterruptedException{
 
        
