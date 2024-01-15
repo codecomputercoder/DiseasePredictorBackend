@@ -31,7 +31,7 @@ public class simpleRestController {
 
        
         // Build the command to call the Python script
-        ProcessBuilder pb = new ProcessBuilder("python", "C:\\Users\\Saikat Moi\\Downloads\\JavaSpringBoot\\predictionofdisease\\src\\main\\python\\prediction_script.py", inputData.getSymList());
+        ProcessBuilder pb = new ProcessBuilder("python", "src\\main\\python\\prediction_script.py", inputData.getSymList());
         pb.redirectErrorStream(true);
 
         // Start the Python script
