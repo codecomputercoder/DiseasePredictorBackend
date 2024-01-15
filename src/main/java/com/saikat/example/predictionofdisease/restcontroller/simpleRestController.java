@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @RestController
 public class simpleRestController {
@@ -18,6 +20,7 @@ public class simpleRestController {
     //@CrossOrigin(origins = "http://localhost:4200")
     @CrossOrigin(origins = "https://disease-predictor-frontend.vercel.app")
     @GetMapping("/em")
+    @RequestMapping(value = "/em", method = {RequestMethod.GET, RequestMethod.OPTIONS})
     public symptoms getMethodName() {
         symptoms s=new symptoms();
         s.setSymList("Hello Guys!");
@@ -27,6 +30,7 @@ public class simpleRestController {
     //@CrossOrigin(origins = "http://localhost:4200")
     @CrossOrigin(origins = "https://disease-predictor-frontend.vercel.app")
     @PostMapping("/em")
+    @RequestMapping(value = "/em", method = {RequestMethod.POST, RequestMethod.OPTIONS})
     public symptoms postMethodName(@RequestBody symptoms inputData) throws IOException, InterruptedException{
 
        
